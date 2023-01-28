@@ -1,0 +1,76 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+ 
+ 
+ 
+
+    
+        <h:body style="background-color:peru">
+       
+        <div >
+            <p style=" text-align: center; font-weight:bold; font-size:30px;font-family: monospace">PACKAGE INFORMATION LIST</p></div>
+            <div align="center"> 
+
+            <h:dataTable  value="#{bean1.getList()}" var="column"
+                          style=" border:20px solid black;width: 70%; " 
+                          border="50">
+               
+                <h:column>
+                    <f:facet name="header">
+                        NAME 
+                    </f:facet>
+                      #{column.name}
+                  
+                </h:column>
+
+                <h:column>
+                    <f:facet name="header" class="text-center alert-warning">
+                       DAYS
+                    </f:facet>
+                  #{column.days}
+                </h:column>
+                <h:column>
+                      <f:facet name="header">
+                        PLACE
+                    </f:facet>
+                     <h:outputText value="  #{column.place}"></h:outputText>
+                </h:column>
+              
+                <h:column>
+                    <f:facet name="header">
+                        PRICE
+                    </f:facet>
+               <h:outputText value="  #{column.price}"></h:outputText>
+                </h:column>
+                
+            </h:dataTable>
+                <h:form>
+                    <h:commandButton value="TOHOME" action="home page" style=" 
+                                     position: relative;top:2px;right:-10px;
+                                     border-radius: 600px 600px 600px 600px;
+                                     font-family: cursive ;
+                                     font-weight: bold; 
+                                     font-size: 20px; 
+                                     margin:100px 10px 10px 10px;
+                                        background-color: coral;"/>
+                     <h:commandButton value="TO BUY PACKAGE " action="packageholiday" style=" 
+                                     position: relative;top:2px;right:-20px;
+                                     border-radius: 600px 600px 600px 600px;
+                                     font-family: cursive ;
+                                     font-weight: bold; 
+                                     font-size: 20px; 
+                                     margin:100px 10px 10px 10px;
+                                     background-color: coral;"/>
+                </h:form>
+               
+        </div>
+            
+    </h:body>
+</html>
+
+
+

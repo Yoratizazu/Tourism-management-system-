@@ -3,10 +3,38 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://xmlns.jcp.org/jsf/html">
     <h:head>
-        <title>Facelet Title</title>
+        <style >
+         .a{
+                font-weight: bold;
+                font-size: 35px;
+                color: black;
+                font-family: inherit;
+                margin:70px 40px 40px 40px;
+                border-radius: 400px 400px 400px 400px;
+               
+            }
+        
+        body{
+             background-image: url("source/image/cool.jpg");
+                background-size: 40%;
+                background-position: center; 
+        }
+        </style>
     </h:head>
     <h:body>
-      this is contact page
+        <h:form>
+            <h1 align="center" > YOU CAN CONTACT US BY THE FOLLOWING INFORMATION </h1>
+            <div align="center">
+                <h:outputLabel class="a" value="OFFICE-> GOLAGOL TAWER 2ND FLOOR"></h:outputLabel><br></br>
+                  <h:outputLabel class="a" value="PHONE-_NO-> +251911224910"></h:outputLabel><br></br>
+                    <h:outputLabel class="a" value="EMAIL-> TOURAGENCY@GMAIL.COM"></h:outputLabel>
+                    <h:commandButton value="HOME" style="position: relative;top: 70px;right: 500px; font-weight: bold;
+                font-size: 20px;
+                color: goldenrod;
+                font-family: cursive;
+  border-radius: 400px 400px 400px 400px;" action="index" /> 
+            </div>
+        </h:form>
     </h:body>
 </html>
 

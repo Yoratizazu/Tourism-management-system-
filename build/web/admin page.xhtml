@@ -31,11 +31,13 @@
   
           
           <h:outputLabel style="position:relative;top:100px;right:-290px;color: goldenrod;font-size:25px;font-family: cursive;"> USER NAME</h:outputLabel>
-          <h:inputText style="width: 190px;height:30px;position:relative;top:100px;right:-330px; border-radius: 400px 400px 400px 400px;" ></h:inputText>
+          <h:inputText style="width: 190px;height:30px;position:relative;top:100px;right:-330px; border-radius: 400px 400px 400px 400px;" value="#{admin.username}" ></h:inputText>
           <h:outputLabel style="position:relative;top:150px;right:60px;color: goldenrod;font-size:25px;font-family: cursive;"> PASSWORD</h:outputLabel>
-          <h:inputSecret  style="width: 190px;height:30px;position:relative;top:150px;right:20px; border-radius: 400px 400px 400px 400px;"  ></h:inputSecret>
+          <h:inputSecret  style="width: 190px;height:30px;position:relative;top:150px;right:20px; border-radius: 400px 400px 400px 400px;" value="#{admin.password}" ></h:inputSecret>
         
-        <h:commandButton class="a" value="LOGIN" action="wellcomepage"  /> 
+        <h:commandButton class="a" value="LOGIN" action="#{admin.validatePassword()}"  /> 
+         <h:commandButton   class= "a" value="TO HOME" action="index" style=" border-radius: 600px 600px 600px 600px;font-family: cursive ; font-weight: bold; font-size: 20px; margin:100px 10px 10px 10px;
+                background-color: appworkspace;"/> 
       </h:form>
    
    </body>

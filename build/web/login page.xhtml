@@ -1,7 +1,8 @@
 <?xml version='1.0' encoding='UTF-8' ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:h="http://xmlns.jcp.org/jsf/html">
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
     <h:head>
         <style>
                
@@ -11,6 +12,17 @@
                 background-size: 50%;
                 background-position: center;
             }
+         td{
+                  background-color: darksalmon;
+              font-size:1rem;
+              color:yellow;
+              border-style:dashed;
+              border-width:1px;
+              top: 500px;
+                right: 300px; 
+            }
+            
+        
    </style>
     </h:head>
     <h:body>
@@ -19,22 +31,41 @@
         LOGIN PAGE</h2>
         
        <h:outputLabel style="position:relative;top:40px;right:-230px;color: darkolivegreen;font-size:20px;font-family: cursive;">FIRST NAME</h:outputLabel>
-          <h:inputText style="width: 190px;height:30px;position:relative;top:40px;right:-280px;" ></h:inputText>
+          <h:inputText style="width: 190px;height:30px;position:relative;top:40px;right:-280px;" value="#{adduser.FIRSTNAME}" ></h:inputText>
           <h:outputLabel style="position:relative;top:80px;right:110px;color: darkolivegreen;font-size:20px;font-family: cursive;"> LAST NAME</h:outputLabel>
-          <h:inputText style="width: 190px;height:30px;position:relative;top:80px;right:40px;" ></h:inputText>
+          <h:inputText style="width: 190px;height:30px;position:relative;top:80px;right:50px;" value="#{adduser.LASTNAME}" ></h:inputText>
       <h:outputLabel style="position:relative;top:120px;right:430px;color: darkolivegreen;font-size:20px;font-family: cursive;">EMAIL</h:outputLabel>
-          <h:inputText style="width: 190px;height:30px;position:relative;top:120px;right:310px;" ></h:inputText>
-          <h:outputLabel style="position:relative;top:170px;right:700px;color: darkolivegreen;font-size:20px;font-family: cursive;">CITY</h:outputLabel>
-                   <h:inputText style="width: 190px;height:30px;position:relative;top:160px;right:560px;" ></h:inputText>
+          <h:inputText style="width: 190px;height:30px;position:relative;top:120px;right:310px;" value="#{adduser.EMAIL}" ></h:inputText>
+          <h:outputLabel style="position:relative;top:170px;right:690px;color: darkolivegreen;font-size:20px;font-family: cursive;">CITY</h:outputLabel>
+                   <h:inputText style="width: 190px;height:30px;position:relative;top:160px;right:560px;" value="#{adduser.CITY}"></h:inputText>
             <h:outputLabel style="position:relative;top:210px;right:940px;color: darkolivegreen;font-size:20px;font-family: cursive;">MOBILE</h:outputLabel>
-                <h:inputText style="width: 190px;height:30px;position:relative;top:160px;right:-400px;" ></h:inputText>
-                <h:outputLabel style="position:relative;top:210px;right:-30px;font-size:20px;font-family: cursive;color:darkolivegreen"> PASSWORD</h:outputLabel>
-          <h:inputSecret  style="width: 190px;height:30px;position:relative;top:200px;right:-80px;"  ></h:inputSecret>
-               <h:commandButton value="LOGIN" style="position: relative;top: 270px;right: -5px; font-weight: bold;
+                <h:inputText style="width: 190px;height:30px;position:relative;top:160px;right:-410px;" value="#{adduser.MOBILE}" ></h:inputText>
+                <h:outputLabel style="position:relative;top:210px;right:-10px;font-size:20px;font-family: cursive;color:darkolivegreen"> PASSWORD</h:outputLabel>
+          <h:inputSecret  style="width: 190px;height:30px;position:relative;top:200px;right:-90px;" value="#{adduser.PASSWORD}"></h:inputSecret>
+            <h:outputLabel style="position:relative;top:240px;right:280px;color: darkolivegreen;font-size:20px;font-family: cursive;">NAME</h:outputLabel>
+                <h:inputText style="width: 190px;height:30px;position:relative;top:240px;right:170px;" value="#{adduser.NAME}" ></h:inputText>
+               <h:commandButton value="LOGIN" style="position: relative;top: 330px;right: 270px; font-weight: bold;
                 font-size: 20px;
                 color: goldenrod;
                 font-family: cursive;
-  border-radius: 400px 400px 400px 400px;" action="service page" /> 
+  border-radius: 400px 400px 400px 400px;" action="#{adduser.PackageData3()}" /> 
+                <h:commandButton value="NEXT" style="position: relative;top: 330px;right: 250px; font-weight: bold;
+                font-size: 20px;
+                color: goldenrod;
+                font-family: cursive;
+  border-radius: 400px 400px 400px 400px;" action="wellcomeuser" /> 
+                <h:dataTable  value="#{bean1.lists}" var="column"
+                        >
+               
+                <h:column>
+                    <f:facet name="header" >
+                       AVAILABLE PACKAGES
+                    </f:facet>
+                      #{column.name}
+                  
+                </h:column>
+                </h:dataTable>
+              
        </h:form>
     </h:body>
 </html>
