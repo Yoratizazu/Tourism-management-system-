@@ -45,11 +45,9 @@ public class Updatebean {
     }
     public void updatedata() throws ClassNotFoundException, SQLException{
      try {
-            
-           
             DBConnection dbcon = new DBConnection();
             Connection con = dbcon.connMethod();
-           // String sql = "UPDATE PACKAGETABLE1 SET DAYS=?,PLACE=?, PRICE=?  WHERE NAME=?";
+          
             PreparedStatement ps = con.prepareStatement("UPDATE PACKAGETABLE1 SET DAYS=?,PLACE=?, PRICE=?  WHERE NAME=?");
           
              ps.setString(1, days);

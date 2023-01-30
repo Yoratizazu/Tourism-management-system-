@@ -17,11 +17,9 @@ public class Canclepackage {
     }
     public void Canclepkg() throws ClassNotFoundException, SQLException{
      try {
-            
-           
-            DBConnection dbcon = new DBConnection();
+          DBConnection dbcon = new DBConnection();
             Connection con = dbcon.connMethod();
-            String sql = "DELETE FROM BUYPACKAGETABLE WHERE NAME =?";
+            String sql = "DELETE FROM BUYPACKAGE WHERE NAME =?";
             PreparedStatement ps = con.prepareStatement(sql);
             ps.setString(1, name);
               ps.executeUpdate();

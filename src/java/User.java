@@ -14,12 +14,9 @@ public class User {
     public String getMyuser() {
         return myuser;
     }
-
-    public void setMyuser(String myuser) {
+  public void setMyuser(String myuser) {
         this.myuser = myuser;
     }
-   
-
     public String getFIRSTNAME() {
         return FIRSTNAME;
     }
@@ -29,10 +26,7 @@ public class User {
     }
      private String PASSWORD;
 
-   
-
-  
-    public String getPASSWORD() {
+     public String getPASSWORD() {
         return PASSWORD;
     }
 
@@ -64,10 +58,7 @@ public class User {
           } catch (ClassNotFoundException | SQLException ex) {
               System.out.println("error");
           }
-            
-         
-                    
-      
+     
       return "packageholiday";
            }
 }

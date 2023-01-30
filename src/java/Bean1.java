@@ -40,31 +40,7 @@ public List<Packagebean1>getList() throws ClassNotFoundException{
     return list;
 }
 
- public List<AddPackageBean>lists;  
-public List<AddPackageBean>getLists() throws ClassNotFoundException{
-    lists=new ArrayList<>();
- 
-    try {
 
-      Statement st;
-      DBConnection obj = new DBConnection();
-       Connection conn = obj.connMethod();
-        st=conn.createStatement();
-        ResultSet rs=st.executeQuery("select NAME from PACKAGETABLE1");
-        AddPackageBean  use=new AddPackageBean ();
-        while(rs.next()){
-       use.setName(rs.getString("name"));
-
-       lists.add(use);
-    
-
- }
-        
-    } catch (SQLException ex) { 
-       
-    }
-    return lists;
-} 
    
     
 }

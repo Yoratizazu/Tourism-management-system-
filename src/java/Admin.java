@@ -1,16 +1,11 @@
-import java.io.Serializable;
+
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import static java.time.Clock.system;
-
-import javax.faces.application.FacesMessage;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
-import javax.faces.context.FacesContext;
 
-//import com.journaldev.jsf.util.SessionUtils;
 @ManagedBean  
 @SessionScoped
 public class Admin  {
@@ -59,10 +54,8 @@ public class Admin  {
             }
         } 
     return "admin page";
-}
-     
     
-     public static boolean validate(String username, String password) {
+}  public static boolean validate(String username, String password) {
         boolean status = false;
        try{
            DBConnection dbcon=new DBConnection();

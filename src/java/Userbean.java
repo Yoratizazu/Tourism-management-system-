@@ -1,5 +1,5 @@
 
-public class Packagebean1  {
+public class Userbean {
 private final String name;
 private final String days;
 private final String place;
@@ -20,10 +20,11 @@ private final String price;
     public String getPrice() {
         return price;
     }
- public Packagebean1(String name,String days,String place,String price){
+
+   public Userbean(String name,String days,String place,String price){
    this.name=name;
    this.days=days;
    this.place=place;
    this.price=price;
-}
+} 
 }

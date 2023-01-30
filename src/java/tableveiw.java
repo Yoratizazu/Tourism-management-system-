@@ -13,9 +13,7 @@ import javax.faces.bean.SessionScoped;
 @ManagedBean(name = "tableveiw")
 @SessionScoped
 public class tableveiw {
-
-
-    public List<AddPackageBean> getUserList() {
+public List<AddPackageBean> getUserList() {
         List<AddPackageBean> list = new ArrayList<>();
         try {
         
@@ -23,16 +21,13 @@ public class tableveiw {
             Connection con = dbcon.connMethod();
             ResultSet rs = con.createStatement().executeQuery("select * from PACKAGETABLE1");
             while (rs.next()) {
-                AddPackageBean admin = new AddPackageBean();
+                AddPackageBean ad = new AddPackageBean();
          
-               admin.setName(rs.getString("NAME"));
-                admin.setDays(rs.getString("DAYS"));
-                admin.setPlace(rs.getString("PLACE"));
-                admin.setPrice(rs.getString("PRICE"));
-               
-                
-              
-                list.add(admin);
+               ad.setName(rs.getString("NAME"));
+                ad.setDays(rs.getString("DAYS"));
+                ad.setPlace(rs.getString("PLACE"));
+                ad.setPrice(rs.getString("PRICE"));
+               list.add(ad);
             }
         } catch (ClassNotFoundException | SQLException e) {
         }

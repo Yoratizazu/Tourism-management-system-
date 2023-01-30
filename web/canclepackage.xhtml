@@ -11,26 +11,50 @@
                 background-size: 50%;
                 background-position: center;
             }
+            .xe{
+             position:relative;top:25px;right:-170px;
+             color: darkolivegreen;
+             font-size:20px; 
+             font-weight:bolder;
+             font-family: cursive;
+            }
+            .xf{
+               position:relative;top:40px;right:-230px;
+               color: darkolivegreen;
+               font-size:20px;
+               font-family: cursive;
+            }
+            .xg{
+                width: 190px;
+                height:30px;
+                position:relative;top:40px;right:-280px;
+            }
+            .xh{
+              position: relative;top: 120px;right: 150px; font-weight: bold;
+                font-size: 20px;
+                color: goldenrod;
+                font-family: cursive;
+                border-radius: 400px 400px 400px 400px;
+            }
+            .xi{
+              position: relative;top: 120px;right: 100px; font-weight: bold;
+                font-size: 20px;
+                color: goldenrod;
+                font-family: cursive;
+                border-radius: 400px 400px 400px 400px;
+            }
    </style>
     </h:head>
     <h:body>
         <h:form>
       
-          <h3 style="position:relative;top:25px;right:-170px;color: darkolivegreen;font-size:20px; font-weight:bolder; font-family: cursive">
+          <h3 class="xe">
          CANCEL PACKAGE</h3>
-       <h:outputLabel style="position:relative;top:40px;right:-230px;color: darkolivegreen;font-size:20px;font-family: cursive;">ENTER PACKAGE NAME</h:outputLabel>
-          <h:inputText style="width: 190px;height:30px;position:relative;top:40px;right:-280px;" value="#{canclepackage.name}"></h:inputText>
+       <h:outputLabel class="xf">ENTER PACKAGE NAME</h:outputLabel>
+          <h:inputText class="xg" value="#{canclepackage.name}"></h:inputText>
          
-               <h:commandButton value="DELETE" style="position: relative;top: 120px;right: 150px; font-weight: bold;
-                font-size: 20px;
-                color: goldenrod;
-                font-family: cursive;
-                border-radius: 400px 400px 400px 400px;" action="#{canclepackage.Canclepkg()}"/>
-               <h:commandButton value="FINISH" action="home page" style="position: relative;top: 120px;right: 100px; font-weight: bold;
-                font-size: 20px;
-                color: goldenrod;
-                font-family: cursive;
-                border-radius: 400px 400px 400px 400px;"  />
+               <h:commandButton   value="DELETE" class="xh" action="#{canclepackage.Canclepkg()}"/>
+               <h:commandButton value="FINISH" action="home page" class="xi"  />
                   </h:form>
                  </h:body>
  </html>

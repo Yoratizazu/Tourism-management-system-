@@ -5,9 +5,7 @@
     
     <h:head>
                    <style>
-               
-          
-        body{
+       body{
                 background-image:url("source/image/italytour.jpg");
                 background-size: 50%;
                 background-position: center;
@@ -22,10 +20,7 @@
          
        <h:outputLabel style="position:relative;top:100px;right:-230px;color: darkolivegreen;font-size:20px;font-family: cursive;">ENTER PACKAGE NAME</h:outputLabel>
        <h:inputText style="width: 190px;height:30px;position:relative;top:100px;right:-400px;" value="#{buypkg.name}" ></h:inputText>
-          <h:outputLabel style="position:relative;top:150px;right:200px;color: darkolivegreen;font-size:20px;font-family: cursive;"> ENTER  NUMBER OF PACKAGE DAYS</h:outputLabel>
-          <h:inputText style="width: 190px;height:30px;position:relative;top:150px;right:150px;" value="#{buypkg.days}"></h:inputText>
-      <h:outputLabel style="position:relative;top:200px;right:750px;color: darkolivegreen;font-size:20px;font-family: cursive;">ENTER PLACE</h:outputLabel>
-      <h:inputText style="width: 190px;height:30px;position:relative;top:200px;right:480px;" value="#{buypkg.place}" ></h:inputText>
+        
      <h:commandButton value="BUY PACKAGE" style="position: relative;top: 290px;right: -220px; font-weight: bold;
                 font-size: 20px;
                 color: goldenrod;
@@ -37,7 +32,7 @@
                 font-family: cursive;
   border-radius: 400px 400px 400px 400px;" action="canclepackage" /> 
 
-          <a href="datatable.xhtml" style=" position: relative;top: 290px;right: -320px; margin: 100px; font-size: 40px; background-color:aliceblue " >View</a>
+          <a href="tablebuy.xhtml" style=" position: relative;top: 290px;right: -320px; margin: 100px; font-size: 40px; background-color:aliceblue " >View</a>
        </h:form>
     </h:body>
 </html>

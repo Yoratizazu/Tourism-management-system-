@@ -12,32 +12,108 @@
                 background-size: 50%;
                 background-position: center;
             }
+            .ya{
+              position:relative;top:50px;right:-190px;
+              color:black;
+              font-size:50px;
+              font-weight:bolder;
+              font-family: monospace;
+            }
+            .yb{
+               position:relative;top:80px;right:-170px;
+               color: darkolivegreen;
+               font-size:20px; 
+               font-weight:bolder;
+               font-family: cursive;
+            }
+            .yc{
+              position:relative;top:100px;right:-230px;
+              color: darkolivegreen;
+              font-size:20px;
+              font-family: cursive;
+            }
+            .yd{
+                width: 190px;height:30px;
+                position:relative;top:100px;right:-400px;
+            }
+            .ye{
+                position:relative;top:150px;right:200px;color: darkolivegreen;font-size:20px;font-family: cursive;
+            }
+            .yf{
+               width: 190px;
+               height:30px;
+               position:relative;top:150px;right:150px;
+            }
+            .yg{
+             position:relative;top:200px;right:750px;
+             color: darkolivegreen;
+             font-size:20px;
+             font-family: cursive;
+            }
+            .yh{
+                width: 190px;height:30px;
+                position:relative;top:200px;right:480px;
+            }
+            .yi{
+                position:relative;top:220px;right:-230px;
+                color: darkolivegreen;
+                font-size:20px;
+                font-family: cursive;
+            }
+            .yj{
+               width: 190px;height:30px;
+               position:relative;top:220px;right:-500px;
+            }
+            .yk{
+            position: relative;top: 290px;right: -220px; 
+            font-weight: bold;
+                font-size: 20px;
+                color: goldenrod;
+                font-family: cursive;
+  border-radius: 400px 400px 400px 400px;
+            }
+            .ym{
+                position: relative;top: 290px;right: -250px;
+                font-weight: bold; 
+                font-size: 20px; 
+                color: goldenrod;
+                font-family: cursive; 
+                border-radius: 400px 400px 400px 400px;
+            }
+            .yl{
+               position: relative;top: 290px;right: -270px;
+               font-size:30px;
+               background-color:aliceblue;
+               font-family: cursive; 
+            }
+            .yn{
+                position: relative;top: 290px;right: 250px; 
+                font-weight: bold; font-size: 20px;  
+                color: goldenrod; font-family: cursive;
+                border-radius: 400px 400px 400px 400px;
+            }
    </style>
  </h:head>
   
     <h:body>
         <h:form>
-      <h2 style="position:relative;top:50px;right:-190px;color: bisque;font-size:50px; font-weight:bolder; font-family: monospace">
+      <h2 class="ya">
           WELCOME TO ADMIN PAGE</h2>
-          <h3 style="position:relative;top:80px;right:-170px;color: darkolivegreen;font-size:20px; font-weight:bolder; font-family: cursive">
+          <h3 class="yb">
           ADD PACKAGE</h3>
-       <h:outputLabel style="position:relative;top:100px;right:-230px;color: darkolivegreen;font-size:20px;font-family: cursive;">ENTER PACKAGE NAME</h:outputLabel>
-       <h:inputText style="width: 190px;height:30px;position:relative;top:100px;right:-400px;" value="#{addPackageBean.name}" ></h:inputText>
-          <h:outputLabel style="position:relative;top:150px;right:200px;color: darkolivegreen;font-size:20px;font-family: cursive;"> ENTER  NUMBER OF PACKAGE DAYS</h:outputLabel>
-          <h:inputText style="width: 190px;height:30px;position:relative;top:150px;right:150px;" value="#{addPackageBean.days}"></h:inputText>
-      <h:outputLabel style="position:relative;top:200px;right:750px;color: darkolivegreen;font-size:20px;font-family: cursive;">ENTER PLACE</h:outputLabel>
-      <h:inputText style="width: 190px;height:30px;position:relative;top:200px;right:480px;" value="#{addPackageBean.place}" ></h:inputText>
-          <h:outputLabel style="position:relative;top:220px;right:-230px;color: darkolivegreen;font-size:20px;font-family: cursive;"> ENTER PRICE</h:outputLabel>
-          <h:inputText style="width: 190px;height:30px;position:relative;top:220px;right:-500px;" value="#{addPackageBean.price}" ></h:inputText>
-               <h:commandButton value="ADD PACKAGE" style="position: relative;top: 290px;right: -220px; font-weight: bold;
-                font-size: 20px;
-                color: goldenrod;
-                font-family: cursive;
-  border-radius: 400px 400px 400px 400px;" action="#{addPackageBean.PackageData()}" /> 
+       <h:outputLabel class="yc">ENTER PACKAGE NAME</h:outputLabel>
+       <h:inputText  class="yd" value="#{addPackageBean.name}" ></h:inputText>
+          <h:outputLabel class="ye"> ENTER  NUMBER OF PACKAGE DAYS</h:outputLabel>
+          <h:inputText class="yf" value="#{addPackageBean.days}"></h:inputText>
+      <h:outputLabel class="yg">ENTER PLACE</h:outputLabel>
+      <h:inputText class="yh" value="#{addPackageBean.place}" ></h:inputText>
+          <h:outputLabel class="yi"> ENTER PRICE</h:outputLabel>
+          <h:inputText class="yj" value="#{addPackageBean.price}" ></h:inputText>
+               <h:commandButton value="ADD PACKAGE" class="yk" action="#{addPackageBean.PackageData()}" /> 
 
-             <h:commandButton value="NEXT" style="position: relative;top: 290px;right: -250px; font-weight: bold; font-size: 20px;  color: goldenrod; font-family: cursive; border-radius: 400px 400px 400px 400px;" action="DELETE AND MODIFY"/> 
-                                      <a href="datatable.xhtml" style="position: relative;top: 290px;right: -270px; font-size:30px; background-color:aliceblue;font-family: cursive; " >View</a>     
-                                       <h:commandButton value="TOHOME" style="position: relative;top: 290px;right: 250px; font-weight: bold; font-size: 20px;  color: goldenrod; font-family: cursive; border-radius: 400px 400px 400px 400px;" action="admin page"/> 
+             <h:commandButton value="NEXT" class="ym" action="DELETE AND MODIFY"/> 
+                                      <a href="datatable.xhtml" class="yl" >View</a>     
+                                       <h:commandButton value="TOHOME"  class= "yn" action="admin page"/> 
            
        </h:form>
     </h:body>
